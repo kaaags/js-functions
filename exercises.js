@@ -195,7 +195,7 @@ console.log(checkQuotient());
  *   @variable Datatype: Number `bango3`
  *   @variable Datatype: Number `bango4`
  *   @variable Datatype: Number `bango5`
- 
+ *
  * #10
  * Function - addThenSubtract
  *   
@@ -210,7 +210,20 @@ console.log(checkQuotient());
  * Console.log your result.
 */ 
 
+var bango3 = 5;
+console.log(bango3);
 
+var bango4 = 6;
+console.log(bango4);
+
+var bango5 = 7;
+console.log(bango5);
+
+function addThenSubtract(num1, num2, num3){
+	return subtract(add(num1, num2), num3);
+}
+
+console.log(addThenSubtract(bango3, bango4, bango5));
 
 /*
  * #11
@@ -226,7 +239,11 @@ console.log(checkQuotient());
  * Console.log your result.
 */ 
 
+function multiplyThenDivide(num1, num2, num3){
+	return divide(multiply(num1, num2), num3);
+}
 
+console.log(multiplyThenDivide(bango3, bango4, bango5));
 
 /*
  * #12
@@ -240,7 +257,11 @@ console.log(checkQuotient());
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
 
+function createFullName(firstName, lastName){
+	return firstName + " " + lastName;
+}
 
+console.log(createFullName("Sean", "Kagawa"));
 
 /*
  * #13 
@@ -256,7 +277,11 @@ console.log(checkQuotient());
  * Console.log your result.
  */
 
+function eatFood(firstName, lastName, food){
+	return createFullName(firstName, lastName) + " eats " + food + " everyday for breakfast.";
+}
 
+console.log(eatFood("Sean", "Kagawa", "granola"));
 
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
@@ -271,7 +296,11 @@ console.log(checkQuotient());
  * Console.log your result. 
 */
 
+function shoeSize(inches){
+	return inches * 2.54 + " centimeters(cm)";
+}
 
+console.log(shoeSize(8.5));
 
 /*
  * #15
@@ -283,7 +312,13 @@ console.log(checkQuotient());
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
  
+var believe = "believe you can and you're halfway there.";
 
+function allCaps(str){
+	return str.toUpperCase();
+}
+
+console.log(allCaps(believe));
 
 /*
  * #16
@@ -293,7 +328,11 @@ console.log(checkQuotient());
  * Console.log your result.
 */
 
+function oneCap(str){
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+console.log(oneCap(believe));
 
 /*
  * #17
@@ -306,7 +345,17 @@ console.log(checkQuotient());
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
 
+function verifyDrinkingAge(age){
+	if(age > 20){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
+var canDrink = verifyDrinkingAge(21);
+console.log(canDrink);
 
 /**
  * #18
@@ -314,8 +363,16 @@ console.log(checkQuotient());
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
 
+function throwParty(){
+	if(canDrink === true){
+		return "Cheee Hoo! We going to da party!";
+	}
+	else{
+		return "Meh, see you at Starbucks.";
+	}
+}
 
-
-
+var canParty = throwParty();
+console.log(canParty);
 
 
